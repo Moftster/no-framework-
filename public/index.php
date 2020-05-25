@@ -1,3 +1,6 @@
 <?php
 
-echo "Testing VS Code commit";
+declare(strict_types = 1); 
+
+require __DIR__ . '/../src/Bootstrap.php';
+
