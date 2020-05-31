@@ -24,6 +24,7 @@ $whoops->register();
 $request = new \Http\HttpRequest($_GET, $_POST, $_COOKIE, $_FILES, $_SERVER);
 $response = new \Http\HttpResponse;
 
+<<<<<<< HEAD
 $dispatcher = \FastRoute\simpleDispatcher(function (\FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/hello-world', function () {
         echo 'Hello World';
@@ -49,6 +50,7 @@ switch ($routeInfo[0]) {
         call_user_func($handler, $vars);
         break;
 }
+
 
 foreach ($response->getHeaders() as $header) {
     header($header, false);
