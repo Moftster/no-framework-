@@ -24,11 +24,11 @@ $whoops->register();
 $request = new \Http\HttpRequest($_GET, $_POST, $_COOKIE, $_FILES, $_SERVER);
 $response = new \Http\HttpResponse;
 
-$response->setContent('404 - Page not found');
-$response->setStatusCode(404);
+// $response->setContent('404 - Page not found');
+// $response->setStatusCode(404);
 
-// $content = '<h1>Hello World</h1>';
-// $response->setContent($content);
+$content = '<h1>Hello World</h1>';
+$response->setContent($content);
 
 foreach ($response->getHeaders() as $header) {
     header($header, false);
